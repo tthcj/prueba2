@@ -1,0 +1,67 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header header"
+        "sidebar c1 c2"
+        "footer footer footer";
+    /* min-height: 100vh; */
+}
+
+header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+aside {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+
+.c1 {
+    grid-area: c1;
+    background-color: #eaeaea;
+    padding: 10px;
+}
+
+.c2 {
+    grid-area: c2;
+    background-color: #eaeaea;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media query para pantallas menores a 768px */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "c1"
+            "c2"
+            "footer";
+    }
+}
+
+
+
+
